@@ -2,19 +2,15 @@
   "name": "redbaron-analytics",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "client",
-    "server"
-  ],
   "scripts": {
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
-    "start:client": "npm run dev --workspace=client",
-    "start:server": "npm run start --workspace=server",
-    "build": "npm run build --workspace=client",
-    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run dev --workspace=server\"",
-    "lint": "npm run lint --workspace=client"
+    "build": "vite build",
+    "dev": "vite",
+    "start": "vite preview"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
